@@ -1,0 +1,435 @@
+<section id="firstsec" class="hero is-success" style="background-color: rgb(37, 36, 36); position: relative;">
+
+    <!--Bubbles Source Code-->
+    <style>
+      /* Define the bubble background */
+      .bubble-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        clip-path: inset(0 0 0 0);
+        filter: blur(20px); /* Initial blur */
+        transition: filter 0.3s ease; /* Smooth transition for blur filter */
+      }
+    
+      /* Style the bubbles */
+      .bubble {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background-color: rgba(138, 237, 214, 0.8); /* Default color */
+        animation: moveBubble 15s ease-in-out infinite alternate;
+        pointer-events: none;
+        box-shadow: 0 0 20px rgba(138, 237, 214, 0.8), 0 0 40px rgba(138, 237, 214, 0.6), 0 0 60px rgba(138, 237, 214, 0.4);
+        filter: blur(25px); /* Apply default blur filter */
+      }
+    
+      @keyframes moveBubble {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(30vw, -20vh);
+        }
+        50% {
+          transform: translate(-25vw, 30vh);
+        }
+        75% {
+          transform: translate(40vw, 10vh);
+        }
+        100% {
+          transform: translate(-35vw, -25vh);
+        }
+      }
+    
+      /* Bubble specific styles */
+      .bubble:nth-child(1) {
+        background-color: rgba(176, 242, 155, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%, 60% 60%, 60% 0%);
+        animation: moveBubble 18s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(2) {
+        background-color: rgba(241, 155, 109, 0.904);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 20s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(3) {
+        background-color: rgba(129, 219, 250, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        animation: moveBubble 22s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(4) {
+        background-color: rgba(255, 223, 186, 0.8);
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%, 50% 50%);
+        animation: moveBubble 24s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(5) {
+        background-color: rgba(241, 114, 130, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 26s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(6) {
+        background-color: rgba(238, 130, 238, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%, 50% 0%);
+        animation: moveBubble 28s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(7) {
+        background-color: rgba(144, 238, 144, 0.8);
+        clip-path: circle(50%);
+        animation: moveBubble 30s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(8) {
+        background-color: rgba(255, 165, 0, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 32s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(9) {
+        background-color: rgba(135, 206, 250, 0.8);
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 60% 0%, 60% 60%);
+        animation: moveBubble 34s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(10) {
+        background-color: rgba(255, 182, 193, 0.8);
+        clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
+        animation: moveBubble 36s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(11) {
+        background-color: rgba(173, 216, 230, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%, 50% 0%);
+        animation: moveBubble 38s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(12) {
+        background-color: rgba(255, 105, 180, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 40s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(13) {
+        background-color: rgba(144, 238, 144, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 0%, 50% 50%);
+        animation: moveBubble 42s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(14) {
+        background-color: rgba(255, 20, 147, 0.8);
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%, 50% 50%);
+        animation: moveBubble 44s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(15) {
+        background-color: rgba(255, 69, 0, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 46s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(16) {
+        background-color: rgba(238, 130, 238, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 48s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(17) {
+        background-color: rgba(255, 215, 0, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        animation: moveBubble 50s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(18) {
+        background-color: rgba(0, 191, 255, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 0%, 50% 50%);
+        animation: moveBubble 52s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(19) {
+        background-color: rgba(255, 99, 71, 0.8);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%, 50% 0%);
+        animation: moveBubble 54s ease-in-out infinite alternate;
+      }
+    
+      .bubble:nth-child(20) {
+        background-color: rgba(186, 85, 96, 0.8);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: moveBubble 56s ease-in-out infinite alternate;
+      }
+    </style>
+    
+    <div class="bubble-background">
+      <!-- Bubbles -->
+      <div class="bubble" style="top: 10px; right: auto;"></div>
+      <div class="bubble" style="top: 300px; right: 100%;"></div>
+      <div class="bubble" style="top: 30px; left: 80%;"></div>
+      <div class="bubble" style="top: 200px; left: 50%;"></div>
+      <div class="bubble" style="top: 500px; left: 20%;"></div>
+      <div class="bubble" style="top: 400px; left: 70%;"></div>
+      <div class="bubble" style="top: 50%; right: 0;"></div>
+      <div class="bubble" style="top: 80%; left: 10%;"></div>
+      <div class="bubble" style="top: 10%; right: 10%;"></div>
+      <div class="bubble" style="top: 90%; left: 60%;"></div>
+      <div class="bubble" style="top: 60%; left: 40%;"></div>
+      <div class="bubble" style="top: 20%; left: 20%;"></div>
+      <div class="bubble" style="top: 80%; right: 50%;"></div>
+      <div class="bubble" style="top: 30%; left: 10%;"></div>
+      <div class="bubble" style="top: 70%; left: 90%;"></div>
+      <div class="bubble" style="top: 40%; right: 30%;"></div>
+      <div class="bubble" style="top: 10%; left: 60%;"></div>
+      <div class="bubble" style="top: 50%; left: 50%;"></div>
+      <div class="bubble" style="top: 70%; right: 20%;"></div>
+      <div class="bubble" style="top: 40%; left: 80%;"></div>
+      <div class="bubble" style="top: 60%; right: 40%;"></div>
+    </div>
+    
+    <!--Bubble Source Code End-->
+
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+        <style>
+          .title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .subtitle {
+            font-size: 18px;
+            text-align: center;
+          }
+
+          @media (max-width: 767px) {
+
+            .title,
+            .subtitle {
+              text-align: left;
+            }
+          }
+        </style>
+
+        <!--Start
+        <h4 style="margin-bottom: 18px; color: rgb(60, 60, 60);">
+          <span style="
+            font-size: 14px;
+            padding: 6px 13px;
+            border-radius: 24px;
+            border: 1px solid rgb(236, 148, 90);
+            background: linear-gradient(45deg, #d35d5d, #7d44c9, #e6ac41, #5465e4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 15s ease-in-out infinite;
+          ">
+            <i style="color: tomato;" class="fa-solid fa-user"></i>
+            | Welcome To My Portfolio
+          </span>
+        </h4>
+
+        <style>
+          @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 0%;
+            }
+
+            50% {
+              background-position: 100% 100%;
+            }
+
+            100% {
+              background-position: 0% 0%;
+            }
+          }
+        </style> End-->
+
+        <!--
+        <h4 style="margin-bottom: 18px; color: rgb(60, 60, 60);">
+          <span style="font-size: 14px; padding: 6px 13px; border-radius: 24px; background-color: white;">
+            <i style="color: tomato;" class="fa-solid fa-user"></i>
+            | Welcome To My Portfolio
+          </span>
+        </h4>-->
+
+        <h3 class="subtitle" style="color: white; font-weight: bold;">
+          Hi, my name is
+        </h3>
+
+        <p class="title" style="font-family: sans-serif; font-size: clamp(2.5rem, 8vw, 5rem);
+        margin-bottom: 20px; color: white;">
+          ACUESTA REU JAMES
+        </p>
+
+        <p class="subtitle" style="font-size: 15px; color: white;">
+          A 24-year-old <span style="font-weight: 600;">Frontend Developer</span> based in Calabarzon, Philippines.
+        </p>
+
+        <!--PROEJECTS, EXP, yOUTBE sUBS, yOUTUBE-->
+        <div class="container" style="max-width: 800px; margin-top: 30px;">
+          <div class="columns is-multiline is-mobile" style="text-align: left;">
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                3 Projects
+                <p style="font-size: 12px;">Personal Projects</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                3 YrsExp
+                <p style="font-size: 12px;">Coding / Designing</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                70 GitHub
+                <p style="font-size: 12px;">Repositories</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                44k Views
+                <p style="font-size: 12px;">Youtube Audience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: -30px;">
+
+
+          <!--
+            <button style="color: white; border-radius: 3px; background-color: #066ed7; border: none; padding: 10px 25px; font-size: 15px; max-width: 2000px;"> 
+              About Me
+            </button>            
+            -->
+
+          <button style="margin-top: 60px; font-weight: bolder; color: white; border-radius: 14px; border: none; padding: 10px 40px 10px 25px; font-size: 15px; 
+                   max-width: 2000px; background-color: rgb(141, 64, 234); position: relative;
+                   transition: all 0.3s ease;" id="seeMoreButton" onclick="toggleText()">Certifications
+            <span id="dots"></span>
+          </button>
+
+
+          <style>
+            /* Chevron symbol style */
+            #seeMoreButton::after {
+              content: '›';
+              /* Chevron pointing to the right */
+              font-size: 20px;
+              /* Adjust the size of the chevron */
+              position: absolute;
+              right: 25px;
+              /* Adjusted space between text and chevron */
+              top: 48%;
+              transform: translateY(-50%);
+              /* Centers the chevron vertically */
+              transition: all 0.3s ease;
+              /* Smooth transition */
+            }
+
+            /* Hover effect */
+            #seeMoreButton:hover::after {
+              right: 20px;
+              /* Move chevron slightly to the right on hover */
+            }
+
+            #seeMoreButton:hover {
+              
+              box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+              /* Creates white space and then black border effect */
+              outline: 2px solid transparent;
+              /* Ensures the white space does not affect the layout */
+            }
+          </style>
+
+
+          <script>
+            function toggleText() {
+              var moreText = document.getElementById("moreText");
+              var button = document.getElementById("seeMoreButton");
+
+              if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+                setTimeout(function () {
+                  moreText.style.opacity = "1";
+                }, 10);
+                button.innerHTML = "Certifications";
+              } else {
+                moreText.style.opacity = "0";
+                setTimeout(function () {
+                  moreText.style.display = "none";
+                }, 500);
+                button.innerHTML = "Certifications";
+              }
+            }
+          </script>
+
+
+          <div id="moreText" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <br>
+
+              <div style="background-color: black;" class="column is-8-desktop mystic-class-name">
+
+                <script type="module" src="https://unpkg.com/rough-notation?module"></script>
+                <script type="module" src="index.js"></script>
+
+
+              </div>
+
+
+              <div style=" background-color: red;" class="column is-3-desktop mystic-class-name">
+                <img style="border-radius: 50%; width: 50%; float: left;" src="/images/hacker hoodie.jpg" alt="">
+              </div>
+            </div>
+
+            <hr>
+
+            <!--Another column for skills-->
+
+            <br>
+
+            <div>
+              <strong style="color: #000; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Tech
+                Stacks</strong>
+            </div>
+
+            <br>
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <div style="color: #000; text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>FRONTEND DEVELOPMENT</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">HTML5 /
+                  CSS3</li>
+                <hr>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Add CONTENT HERE -->
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
